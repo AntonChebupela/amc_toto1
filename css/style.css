@@ -1,0 +1,529 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* чтобы прибить к низи */
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* чтобы прибить к низи */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400px;
+  line-height: 1.3;
+}
+
+.header {
+  background-color: #151515;
+  margin-bottom: 60px;
+}
+
+/* Приподнять вверх и так как оно прижмется к правому краю нужно рассправить */
+.header-main {
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+}
+
+.header__inner {
+  padding-top: 40px;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  gap: 35px;
+}
+
+.menu__list-link {
+  color: white;
+  text-transform: uppercase;
+  width: 700px;
+}
+
+.menu__list-link:hover {
+  color: blue;
+  transition: all 0.3s ease;
+}
+
+.menu__list-link--active {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #151515;
+  padding: 50px 0px 32px;
+  color: white;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.footer-menu-list {
+  max-width: 250px;
+}
+
+.footer__menu-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+/* Находит 1, но применяет к соседу */
+.footer__menu-item + .footer__menu-item {
+  padding-top: 20px;
+}
+
+.footer__menu-link:hover {
+  color: blue;
+  transition: all 0.3s ease;
+}
+
+.footer__menu-link--active {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 52px;
+}
+
+.footer__copy {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.copy__nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* чтобы прибить к низи */
+.main {
+  flex-grow: 1;
+}
+
+/* Тачки */
+
+/* Приподнять вверх и так как оно прижмется к правому краю нужно рассправить */
+.top {
+  color: white;
+  text-align: center;
+  padding: 250px;
+  padding-bottom: 50px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.top__link {
+  background-color: #151515;
+  padding: 23px;
+  max-width: 430px;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* .3 - альфа канал прозрачности */
+.swiper::after {
+  content: "";
+  background: rgba(21, 21, 21, 0.6);
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 3px;
+  background-color: #151515;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0 15px !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 50px;
+}
+
+.swiper-pagination-bullet-active {
+  height: 6px;
+  background-color: white;
+}
+
+/* Середина главной страницы */
+.why-lease {
+  padding: 150px 0;
+}
+
+.why-lease__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.why-lease__item-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  width: 700;
+}
+
+.why-lease__item_img {
+  margin-bottom: 30px;
+}
+
+/*HOw does  */
+
+.how-does {
+  padding-bottom: 150px;
+}
+
+.how-does__inner {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.how__does-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+
+.how__does-list {
+  margin: 50px 0 70px;
+  counter-reset: myCounter;
+}
+
+.how__doest-item {
+  list-style-type: none;
+  width: 270px;
+  position: relative;
+  padding-left: 240px;
+  box-sizing: content-box;
+  padding: 19px 0 19px 240px;
+  min-height: 63px;
+}
+
+.how__doest-item + .how__doest-item {
+  margin-top: 40px;
+}
+
+.how__doest-item::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: 700;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  left: 0;
+}
+
+/* Блок с Видео */
+
+.video {
+  margin-bottom: 150px;
+}
+
+.video__text {
+  font-size: 24px;
+  width: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.MaskVideo {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Важные вещи */
+
+.important {
+  padding-bottom: 150px;
+}
+
+.important__item {
+  width: 270px;
+  position: relative;
+}
+
+.important__title {
+  margin-bottom: 20px;
+}
+
+.important__text {
+  max-width: 580px;
+  margin: 0 auto 50px;
+}
+
+.important__list {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+  justify-content: center;
+}
+
+/* about section */
+.about {
+  width: 100%;
+  height: auto;
+}
+
+.about-name {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 32px;
+  margin: 32px 0 22px;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px;
+  opacity: 0.7;
+}
+
+.seperator {
+  width: 25%;
+  margin: px auto;
+  position: relative;
+}
+
+.about-me-container {
+  margin: 0 0 100px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+
+.left-col,
+.right-col {
+  position: relative;
+}
+
+.left-col::before {
+  text-transform: capitalize;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.left-col::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 80px;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(-30deg);
+}
+
+.about-image {
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+}
+
+.about-para {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 35px;
+  margin-bottom: 40px;
+  max-width: 1000px;
+}
+
+.contact-holder {
+  margin-bottom: 30px;
+}
+
+.contact-holder-title,
+.contact-holder-desc {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-holder-title {
+  padding-bottom: 20px;
+}
+
+.contact-holder-desc {
+  padding-bottom: 45px;
+}
+
+.contact-holder-list {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  justify-content: center;
+}
+
+.contact-item-img {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+}
+
+.contact-item-desc:hover {
+  color: blue;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.contact-holder-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  text-align: center;
+}
+
+/* Код для оцените нас */
+
+.rating-box {
+  position: relative;
+  background: #fff;
+  padding: 25px 50px 35px;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rating-box header {
+  display: block;
+  font-size: 22px;
+  color: #dadada;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.rating-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-box .stars {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.stars i {
+  color: #e6e6e6;
+  font-size: 35px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.stars i.active {
+  color: #ff9c1a;
+}
+
+.reset {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.reset_button {
+  background-color: #151515;
+  padding: 14px;
+  max-width: 300px;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
